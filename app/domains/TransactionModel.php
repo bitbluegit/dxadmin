@@ -15,7 +15,7 @@ class TransactionModel
 	
 	public function getUsers()
 	{
-		$sql = "SELECT * FROM clg_hat";
+		$sql = "SELECT * FROM clg_ht";
 		return $this->_db->all($sql);
 	}
 	

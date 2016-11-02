@@ -67,7 +67,7 @@ class Response
     public function html($content) : Response
     {
         if(!is_string($content) && !is_numeric($content)) {
-            throw new HttpResponseException('Please provide a string for HTML response content');
+            throw new Exception('Please provide a string for HTML response content');
         }
 
         $this->_type = 'text/html';
@@ -79,7 +79,7 @@ class Response
     public function code(int $code) : Response
     {
         if(!array_key_exists($code, self::$_statusMessages)) {
-            throw new HttpResponseException(sprintf("Invalid HTTP status code: %s supplied", $code));
+            throw new Exception(sprintf("Invalid HTTP status code: %s supplied", $code));
         }
 
         $this->_code = $code;
@@ -111,7 +111,7 @@ class Response
         }
 
         if(!array_key_exists($code, self::$_statusMessages)) {
-            throw new HttpResponseException(sprintf("Invalid HTTP status code: %s supplied", $code));
+            throw new Exception(sprintf("Invalid HTTP status code: %s supplied", $code));
         }
 
         header(sprintf("HTTP/1.1 %s %s", $code, self::$_statusMessages[$code]));

@@ -28,7 +28,7 @@ class Index
 		set_exception_handler(['\Framework\ExceptionHandler', 'catchException']);
 		
 		// register custom error handler
-		set_error_handler(['\Framework\ErrorHandler', 'catchError']);
+		//set_error_handler(['\Framework\ErrorHandler', 'catchError']);
 		
 		// dispatch application request
 		(new \Framework\Router)->dispatch();

@@ -8,17 +8,12 @@ class ExceptionHandler
 {
 	public static function catchException(Exception $e)
 	{
-		echo 'Whoops!!';
-		\Framework\Dump::p($e->getCode());
-		\Framework\Dump::p($e->getFile());
-		\Framework\Dump::p($e->getLine());
-		\Framework\Dump::p($e->getMessage());
-		\Framework\Dump::p($e->getTrace());
+		self::_renderErrors($e->getFile(), $e->getLine(), $e->getMessage(), $e->getTraceAsString());
 		exit(-1);
 	}
 	
-	private function _renderErrors()
+	private static function _renderErrors($file, $line, $mssg, $trace)
 	{
-		
+		require_once 'templates/exception.php';
 	}
 }

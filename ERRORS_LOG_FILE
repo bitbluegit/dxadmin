@@ -1,0 +1,10 @@
+
+
+You gotta 'Notice' on date: 02/11/2016 14:10
+
+[Message]: Undefined property: Exception::$getFile
+
+[File]: C:\Program Files (x86)\Ampps\www\dxadmin\framework\src\ExceptionHandler.php
+
+[Line]: 27
+

@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Dextro\\": "app/",
+            "Framework\\": "framework/src/"
+        }
+    }
+}
